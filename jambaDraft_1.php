@@ -15,14 +15,14 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('.default').siblings().hide();
-
-			$('.popup').hover( function(){},function(){
-				$(this).z-index(100); $(this).hide();
-			});
+			
+			// $('.popup').hover( function(){},function(){
+			// 	$(this).z-index(100); $(this).style.display= 'none';
+			// });
 
 			$('.default').hover(
-				function(){$(this).hide(); $(this).siblings().show(); $(this).siblings().z-index(0);},
-				function(){$(this).opacity(1);} 
+				function(){$(this).siblings().show(); $(this).style.display= 'none'; $(this).siblings().z-index(0);},
+				function(){} 
 				);
 
 
