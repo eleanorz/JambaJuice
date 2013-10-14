@@ -14,7 +14,11 @@
 	<!-- JQuery Guts --> 
 	<script type="text/javascript">
 		$(document).ready(function(){
+<<<<<<< HEAD
 			// $('.default').parent("popup").hide();
+=======
+			$('.default').siblings().hide();
+>>>>>>> 7d7b98121d43b998706e3810008fe756d65ff78a
 
 			
 		// JEREMY"S CODE for TOGGLE
@@ -33,7 +37,11 @@
 			// 	function(){} 
 			// 	);
 
+<<<<<<< HEAD
 			// $('.default').hover(function(){$(this).siblings().slideToggle();}, function(){$(this).siblings().slideToggle();});
+=======
+			$('.default').hover(function(){$(this).siblings().slideToggle();}, function(){$(this).siblings().slideToggle();});
+>>>>>>> 7d7b98121d43b998706e3810008fe756d65ff78a
 
 
 
@@ -83,6 +91,7 @@
 	
 		<div class='item_wrapper'>
 			<div class='default'>
+<<<<<<< HEAD
 				<h3>Mango-A-Go-Go 22</h3>
 				<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
 			
@@ -105,6 +114,33 @@
 						<input type="submit" value="Add to Cart">
 					</form>
 				</div>
+
+=======
+				<h3>Mango-A-Go-Go</h3>
+				<h4>mangos, passionfruit-mango juice, pineapple sherbet 
+				</h4>
+			
+			<div class='popup'> 
+				<img src="pic/MangoAgogo.jpg" alt="mango">
+				<p>Mango-A-Go-Go <br>These mangos will get you movin’! Are you the president of the Mango Appreciation Society? Do you count mangos to fall asleep? Then welcome to paradise. We blend heaps of mangos and passion fruit-mango juice topped off with pineapple sherbet to make your dreams come true.</p>
+								<form name="add_to_cart" action="">
+									<br>
+									<select>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+	
+									<select>
+									  <option value="volvo">16 oz - $2.50</option>
+									  <option value="saab">22 oz - $3.50</option>
+									  <option value="mercedes">30 oz - $3.99</option>
+									</select>
+									<input type="submit" value="Add to Cart">
+								</form>
+>>>>>>> 7d7b98121d43b998706e3810008fe756d65ff78a
+			</div>
 
 			</div>
 		</div>
