@@ -14,16 +14,26 @@
 	<!-- JQuery Guts --> 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('.default').siblings().hide();
-			
-			// $('.popup').hover( function(){},function(){
-			// 	$(this).z-index(100); $(this).style.display= 'none';
-			// });
+			// $('.default').parent("popup").hide();
 
-			$('.default').hover(
-				function(){$(this).siblings().show(); $(this).style.display= 'none'; $(this).siblings().z-index(0);},
-				function(){} 
-				);
+			
+		// JEREMY"S CODE for TOGGLE
+		//function attachEventListeners(selector) 
+		// {
+		// 	$('#'+selector).hover(function(){
+		// 		// console.log($(this).children('.stats'));
+		// 		$(this).children('div.stats').slideToggle();
+		// 	});
+		// }
+
+
+			//functioning hide/show 
+			// $('.default').hover(
+			// 	function(){$(this).siblings().show(); $(this).style.display= 'none'; $(this).siblings().z-index(0);},
+			// 	function(){} 
+			// 	);
+
+			// $('.default').hover(function(){$(this).siblings().slideToggle();}, function(){$(this).siblings().slideToggle();});
 
 
 
@@ -73,30 +83,29 @@
 	
 		<div class='item_wrapper'>
 			<div class='default'>
-				<h3>Mango-A-Go-Go</h3>
-				<h4>mangos, passionfruit-mango juice, pineapple sherbet 
-				</h4>
-			</div>
+				<h3>Mango-A-Go-Go 22</h3>
+				<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
+			
+				<div class='popup'> 
+					<img src="pic/MangoAgogo.jpg" alt="mango">
+					<p>Mango-A-Go-Go <br>These mangos will get you movin’! Are you the president of the Mango Appreciation Society? Do you count mangos to fall asleep? Then welcome to paradise. We blend heaps of mangos and passion fruit-mango juice topped off with pineapple sherbet to make your dreams come true.</p>
+					<form name="add_to_cart" action="post">
+						<select>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+						</select>
 
-			<div class='popup'> 
-				<img src="pic/MangoAgogo.jpg" alt="mango">
-				<p>Mango-A-Go-Go <br>These mangos will get you movin’! Are you the president of the Mango Appreciation Society? Do you count mangos to fall asleep? Then welcome to paradise. We blend heaps of mangos and passion fruit-mango juice topped off with pineapple sherbet to make your dreams come true.</p>
-								<form name="add_to_cart" action="">
-									<br>
-									<select>
-									  <option value="1">1</option>
-									  <option value="2">2</option>
-									  <option value="3">3</option>
-									  <option value="4">4</option>
-									</select>
-	
-									<select>
-									  <option value="volvo">16 oz - $2.50</option>
-									  <option value="saab">22 oz - $3.50</option>
-									  <option value="mercedes">30 oz - $3.99</option>
-									</select>
-									<input type="submit" value="Add to Cart">
-								</form>
+						<select>
+						  <option value="volvo">16 oz - $2.50</option>
+						  <option value="saab">22 oz - $3.50</option>
+						  <option value="mercedes">30 oz - $3.99</option>
+						</select>
+						<input type="submit" value="Add to Cart">
+					</form>
+				</div>
+
 			</div>
 		</div>
 	
@@ -247,6 +256,22 @@
 				</h4>
 			</div>
 		</div>	
+
+
+		<div class='checkout'> 
+				<h1>Review My Order</h1>
+
+				<div id='enter_address'>
+					<h3> Enter current address to find nearest store</h3>
+					<input type="text" placeholder='your address'> <!-- make this tie into google API -->
+				</div>
+
+					<h4>Approximate time for pickup: </h4>
+					<div id='ToD'> <h2>1:15pm</h2></div>
+					<input type="submit" value='change'>
+				
+
+			</div>
 	
 	
 	</div>
