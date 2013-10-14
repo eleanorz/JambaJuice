@@ -147,7 +147,7 @@ float: left;
 
 .popup{
 	position: absolute;
-	left: 70%;
+	left: 55%;
 	z-index: 100;
 	clear: both;
 	height: auto;
@@ -156,7 +156,7 @@ float: left;
 	border-radius: 20px;
 	font-size: 10px;     
 	padding:8px;
-	background-color: red;
+	background-color: #D7EDB4;
 }
 
 .popup img{
@@ -173,4 +173,35 @@ float: left;
 	height: auto;
 	margin-left: 10px;
 	margin-top:0px;
+}
+
+.checkout{
+	min-height: 450px;
+	min-width: 400px;
+	position: absolute;
+	left: 20%;
+	z-index: 100;
+	clear: both;
+	height: auto;
+	width: 276px;
+	border: 1px solid yellow;
+	border-radius: 20px;
+	font-size: 10px;     
+	padding:8px;
+	background-color: #D7EDB4;
+}
+
+.checkout input{
+	float: right;
+}
+
+#enter_address{
+	background-color: #CCFF33;
+
+	margin-top: -15px;
+	padding-top: 16px;
+	padding-bottom: 30px;
+
+	padding-left: 15px;
+	padding-right: 15px;
 }
