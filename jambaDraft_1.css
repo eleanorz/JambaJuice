@@ -123,7 +123,6 @@ float: left;
 }
 
 .default{
-	z-index: 10;
 	border: 1px solid pink;
 	padding-left: 3px;
 	padding-right: 3px;
@@ -135,6 +134,8 @@ float: left;
 }
 
 .default h3{
+	z-index: 10;
+	position:relative;
 	font-family: 'Walter Turncoat', cursive;
 	color:#F47B2A;
 	margin-left: 10px;
@@ -143,7 +144,9 @@ float: left;
 }
 
 .default h4{
+	position:relative;
 	margin-top: 0px;
+	z-index: 10;
 }
 
 .popup{
@@ -151,7 +154,7 @@ float: left;
 	left: -50px;
 	top: 118px;
 	clear: both;
-	z-index: -2;
+	z-index: 100;
 	width: 276px;
 	border: 10px solid yellow;
 	border-radius: 20px;

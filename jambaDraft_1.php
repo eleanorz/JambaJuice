@@ -14,30 +14,10 @@
 	<!-- JQuery Guts --> 
 	<script type="text/javascript">
 		$(document).ready(function(){
+			//line below: sets popup descriptions to hide by default
 			$('.default').children(".popup").hide();
-
-			
-		// JEREMY"S CODE for TOGGLE
-		//function attachEventListeners(selector) 
-		// {
-		// 	$('#'+selector).hover(function(){
-		// 		// console.log($(this).children('.stats'));
-		// 		$(this).children('div.stats').slideToggle();
-		// 	});
-		// }
-
-
-			//functioning hide/show 
-			$('.default').hover(
-				function(){$(this).children('.popup').show(); $(this).children('.popup').z-index(101);},
-				function(){$(this).children('.popup').hide(); $(this).children('.popup').z-index(-2);} 
-				);
-
-			// $('.default').hover(function(){$(this).siblings().slideToggle();}, function(){$(this).siblings().slideToggle();});
-
-
-
-
+			//line below: handles toggling the pop-up
+			$('.default').hover(function(){$(this).children('.popup').slideToggle();}, function(){$(this).children('.popup').slideToggle();});
 		});
 	</script>
 </head>
@@ -59,11 +39,10 @@
 
 <div id='main_menu'>
 
-<div><div class='smoothie_type'>
+
+	<div class='smoothie_type'>
 		<h2>Classic Smoothies</h2>
-	</div>
-	
-	
+	</div>	
 	
 		<div class='item_wrapper'>
 			<div class='default'>
@@ -268,16 +247,11 @@
 
 					<h4>Approximate time for pickup: </h4>
 					<div id='ToD'> <h2>1:15pm</h2></div>
-					<input type="submit" value='change'>
-				
+					<input type="submit" value='change'>		
 
-			</div>
-	
+		</div>
 	
 	</div>
-
-	</div>
-
 </div>
 </body>
 </html>
