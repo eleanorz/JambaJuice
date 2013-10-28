@@ -16,8 +16,8 @@
 		$(document).ready(function(){
 			//line below: sets popup descriptions to hide by default
 			$('.default').children(".popup").hide();
-			//line below: handles toggling the pop-up
-			$('.default').hover(function(){$(this).children('.popup').slideToggle();}, function(){$(this).children('.popup').hide();});
+			//line below: handles toggling the pop-up, and changes background color to pink during hover
+			$('.default').hover(function(){$(this).children('.popup').slideToggle();$(this).css("background-color", "#FEBF94");}, function(){$(this).children('.popup').hide();$(this).css("background-color", "white");});
 		});
 	</script>
 </head>
@@ -49,20 +49,22 @@
 				<h3>Peach Pleasure</h3>
 				<h4>peaches, bananas, peach juice, orange sherbet</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/PeachPleasure.jpg" alt="peachpls">
@@ -77,20 +79,21 @@
 				<h3> Strawberry Surf Rider</h3>
 				<h4>strawberries, peaches, lemonade, lime sherbet</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/StrawberrySurfrider.jpg" alt="strawsurf">
@@ -105,20 +108,22 @@
 				<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
 			
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="add_to_cart">
 					</form>
 
 					<img src="pic/MangoAgogo.jpg" alt="mango">
@@ -134,20 +139,22 @@
 				<h4>mixed berry juice, strawberries, bananas, orange sherbet
 				</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/Razzamatazz.jpg" alt="">
@@ -166,20 +173,22 @@
 				<h4>strawberries, bananas, apple-strawberry juice, nonfat frozen yogurt
 				</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/StrawberryWild.jpg" alt="strawwild">
@@ -196,20 +205,22 @@
 				<h4> passionfruit-mango juice, strawberries, peaches, orange sherbet
 				</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/CarribeanPassion.jpg" alt="carpas">
@@ -226,20 +237,22 @@
 				<h4>bananas, blueberries, apple-strawberry juice, raspberry sherbet, nonfat frozen yogurt
 				</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="Add to Cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/BananaBerry.jpg" alt="banber">
@@ -256,20 +269,22 @@
 				<h4>orange juice, strawberries, bananas, frozen yogurt
 				</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/Orangeapeel.jpg" alt="orgpl">
@@ -304,20 +319,22 @@
 				<h4>pineapple juice, strawberries, bananas, pineapple sherbet, nonfat plain yogurt
 				</h4>
 				<div class='popup'> 
-					<form name="add_to_cart" action="post">
-						<select>
+					<form name="drink_form" action="process.php" method="post">
+						<select name='number_drinks'>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
 						  <option value="4">4</option>
 						</select>
 
-						<select>
+						<select name="size">
 						  <option value="16oz">16 oz - $2.50</option>
 						  <option value="22oz">22 oz - $3.50</option>
 						  <option value="30oz">30 oz - $3.99</option>
 						</select>
-						<input type="submit" value="Add to Cart">
+
+						<input type="hidden" name="action" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/PineappleAloha.jpg" alt="pinealoha">
