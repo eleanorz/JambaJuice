@@ -30,7 +30,26 @@
 			<img src="pic/jambajuice_text_wide.jpg" alt="jamba juice">
 		</div>
 		<div id='drinkhold'>
-			<img src="pic/twocup_carrier.jpg" alt="holder">
+			<img src="pic/
+				<?php 
+					if (!isset($_SESSION['total_drinks'])) {
+						echo "empty_carrier.jpg";
+					}
+					elseif ($_SESSION['total_drinks']==1) {
+						echo "one_carrier.jpg";
+					}
+					elseif ($_SESSION['total_drinks']==2) {
+						echo "two_carrier.jpg";
+					}
+					elseif ($_SESSION['total_drinks']==3) {
+						echo "three_carrier.jpg";
+					}
+
+					else{
+						echo "three_carrier.jpg";
+					}
+
+			 	?>" alt="holder">
 			<div id='testcupholderdata'>
 
 				<?php 
