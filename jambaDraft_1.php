@@ -31,6 +31,17 @@
 		</div>
 		<div id='drinkhold'>
 			<img src="pic/twocup_carrier.jpg" alt="holder">
+			<div id='testcupholderdata'>
+
+				<?php 
+					if (isset($_SESSION['total_drinks'])) 
+					{
+						echo $_SESSION['total_drinks'];
+					
+					}
+				?>
+
+			</div>
 		</div>
 		<h1> order for pick-up with three clicks</h1>
 	</div>
@@ -101,10 +112,11 @@
 				</div>
 			</div>
 		</div>
+
 	
 		<div class='item_wrapper'>
 			<div class='default'>
-				<h3>Mango-A-Go-Go 22</h3>
+				<h3>Mango-A-Go-Go</h3>
 				<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
 			
 				<div class='popup'> 
@@ -123,7 +135,7 @@
 						</select>
 
 						<input type="hidden" name="action" value="add_to_cart">
-						<input type="submit" value="add_to_cart">
+						<input type="submit" value="Add to Order">
 					</form>
 
 					<img src="pic/MangoAgogo.jpg" alt="mango">
