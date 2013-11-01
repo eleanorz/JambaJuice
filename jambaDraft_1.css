@@ -12,7 +12,8 @@
 
 	width: 960px;
 	border: 1px solid yellow;
-	font-family: 'Jura', sans-serif;
+/*	font-family: 'Jura', sans-serif;
+*/	font-family: 'robgravesmedium', Arial, sans-serif;
 /*	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 */}
 
@@ -115,8 +116,11 @@
 
 
 .smoothie_type h2{
-	font-family: 'Chango', cursive;
-	color: #C3087E;
+/*	font-family: 'Chango', cursive;
+	color: #C3087E;*/
+	font-family: 'drawing_guidesregular', Arial, sans-serif; 
+	opacity: .90;
+	color: #FFB8FF;
 	margin-left: 358px;
 	margin-top: 0px;
 	margin-bottom: 5px;
@@ -136,8 +140,10 @@
 .default h3{
 	z-index: 10;
 	position:relative;
-	font-family: 'Walter Turncoat', cursive;
-	color:#F47B2A;
+	/*font-family: 'Walter Turncoat', cursive;
+	color:#F47B2A;*/
+	font-family: 'chalkboard_by_marta_van_eckRg', Arial, sans-serif;
+	color: #CCFF66;
 	margin-left: 10px;
 	margin-top: 0px;
 	margin-bottom: 5px;

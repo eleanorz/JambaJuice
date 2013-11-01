@@ -1,0 +1,24 @@
+
+*{
+	background-color: black;
+	color: white;
+	font-size: 100px;
+}
+
+#font1{
+	font-family: 'drawing_guidesregular', Arial, sans-serif; 
+	opacity: .80;
+	color: #FFB8FF;
+}
+
+#font2{
+	font-family: 'chalkboard_by_marta_van_eckRg', Arial, sans-serif;
+	font-size: 50px;
+	color: #CCFF66;
+
+}
+
+#font3{
+	font-family: 'robgravesmedium', Arial, sans-serif;
+	font-size: 20px;
+}
