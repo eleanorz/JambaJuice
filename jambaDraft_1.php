@@ -12,11 +12,6 @@
 	<link rel="stylesheet" type='html/css' href="slide.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
-
-	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<!-- JQuery Guts --> 
 	<script type="text/javascript">
@@ -24,17 +19,13 @@
 			//line below: sets popup descriptions to hide by default
 			$('.default').children(".popup").hide();
 			//line below: handles toggling the pop-up, and changes background color to pink during hover
-			$('.default').hover(function(){$(this).children('.popup').slideToggle();$(this).css("background-color", "#FEBF94");}, function(){$(this).children('.popup').hide();$(this).css("background-color", "white");});
-		});
-	</script>
-
-	<script type="text/javascript">
-			$(document).ready(function(){
-				$('#splashslide').siblings().children('.bigslide').hide();
-				$('#splashslide').siblings().children('.smalltab').css('background-color','black');
-				$('.smalltab').hover(function(){
-				$(this).siblings().show(); $(this).parent().siblings().children('.bigslide').hide();$(this).parent().siblings().children('.smalltab').css('background-color','black');
-				$(this).css('background-color','orange');});
+			$('.default').hover(function(){$(this).children('.popup').slideToggle();$(this).css("background-color", "#FEBF94");$(this).css("color", "black");}, function(){$(this).children('.popup').hide();$(this).css("background-color", "transparent");$(this).css("color", "white");});
+			//below handles chalkboard slides movement
+			$('#splashslide').siblings().children('.bigslide').hide();
+			$('#splashslide').siblings().children('.smalltab').css('background-color','black');
+			$('.smalltab').hover(function(){
+			$(this).siblings().show(); $(this).parent().siblings().children('.bigslide').hide();$(this).parent().siblings().children('.smalltab').css('background-color','black');
+			$(this).css('background-color','orange');});
 			});
 		</script>
 </head>
@@ -348,17 +339,7 @@
 							</div>
 						</div>
 					</div>	
-				
-				
-					<div class='item_wrapper'>
-						<!-- EMPTY PLACEHOLDER DIV -->
-						<div class='default'>
-							<h3></h3>
-							<h4>
-							</h4>
-						</div>
-					</div>	
-				
+							
 					<div class='item_wrapper'>
 						<div class='default'>
 							<h3>Pomegranate Pick-Up</h3>
@@ -479,13 +460,13 @@
 						</h4>
 					</div>
 				</div>	
-				<div class='item_wrapper'>
+				<!-- <div class='item_wrapper'>
 					<div class='default'>
 						<h3></h3>
 						<h4>
 						</h4>
 					</div>
-				</div>	
+				</div> -->	
 			</div>
 			<div class='smalltab'> tab</div>			
 		</div>
