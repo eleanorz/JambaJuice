@@ -104,7 +104,7 @@
 	padding-left: 13px;
 	left margin: -100px;
 	height: auto;
-	width: 960px;
+	width: 1050px;
 	border: 1px solid yellow;
 }
 
@@ -217,16 +217,17 @@
 
 .bigslide{
 	float: left;
-	border: solid red 5px;
+	border: solid red 1px;
 	height: 502px;
 	width: 900px;
 	background-image: url("pic/finalwoodframe.jpg");
 	background-repeat:no-repeat;
+	background-size:100% 100%;
 }
 
 .smalltab{
 	float: left;
-	border: solid blue 5px;
+	border: solid blue 1px;
 	height: 502px;
 	width: 5px;
 }
