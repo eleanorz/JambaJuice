@@ -3,8 +3,8 @@
 ?>
 
 *{
-	font-family: Tahoma, Verdana, Segoe, sans-serif;
-
+/*	font-family: Tahoma, Verdana, Segoe, sans-serif;
+*/
 }
 
 
@@ -213,4 +213,20 @@
 
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+.bigslide{
+	float: left;
+	border: solid red 5px;
+	height: 502px;
+	width: 900px;
+	background-image: url("pic/finalwoodframe.jpg");
+	background-repeat:no-repeat;
+}
+
+.smalltab{
+	float: left;
+	border: solid blue 5px;
+	height: 502px;
+	width: 5px;
 }

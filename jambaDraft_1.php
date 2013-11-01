@@ -7,12 +7,16 @@
 <head>
 	<title>Jamba Juice Menu</title>
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
 	<link rel="stylesheet" type='html/css' href="jambaDraft_1.css">
+	<link rel="stylesheet" type='html/css' href="slide.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8">
- <!-- brings in webfonts -->
 
+
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<!-- JQuery Guts --> 
 	<script type="text/javascript">
@@ -23,6 +27,16 @@
 			$('.default').hover(function(){$(this).children('.popup').slideToggle();$(this).css("background-color", "#FEBF94");}, function(){$(this).children('.popup').hide();$(this).css("background-color", "white");});
 		});
 	</script>
+
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('#splashslide').siblings().children('.bigslide').hide();
+				$('#splashslide').siblings().children('.smalltab').css('background-color','black');
+				$('.smalltab').hover(function(){
+				$(this).siblings().show(); $(this).parent().siblings().children('.bigslide').hide();$(this).parent().siblings().children('.smalltab').css('background-color','black');
+				$(this).css('background-color','orange');});
+			});
+		</script>
 </head>
 
 <body>
@@ -381,6 +395,28 @@
 		
 
 <div class="clear"></div>
+<!-- BELOW IS TEST OF SLIDER JQUERY -->
+		<div id='splashslide' class='slide_container' >
+			<div class='bigslide'>
+<!-- 				<img src="pic/finalwoodframe.jpg" alt="frame">
+ -->			</div>
+			<div class='smalltab'> tab</div>
+		</div>
+
+		<div class='slide_container'>
+			<div class='bigslide'>
+<!-- 				<img src="pic/finalwoodframe.jpg" alt="frame">
+ -->			</div>
+			<div class='smalltab'> tab</div>
+		</div>
+
+		<div class='slide_container'>
+			<div class='bigslide'>
+<!-- 				<img src="pic/finalwoodframe.jpg" alt="frame">
+ -->			</div>
+			<div class='smalltab'> tab</div>			
+		</div>
+<!-- ABOVE IS TEST OF SLIDER JQUERY -->
 
 <div class='smoothie_type'>
 	<h2>All Fruit Smoothies</h2>
