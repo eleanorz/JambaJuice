@@ -127,7 +127,7 @@
 	font-size: 53px;
 }
 
-.default{
+.item_wrapper{
 	border: .3px solid pink;
 	padding-left: 3px;
 	padding-right: 3px;
@@ -141,7 +141,7 @@
 	color: white;
 }
 
-.default h3{
+.item_wrapper h3{
 	z-index: 10;
 	position:relative;
 	/*font-family: 'Walter Turncoat', cursive;
@@ -153,7 +153,7 @@
 	margin-bottom: 5px;
 }
 
-.default h4{
+.item_wrapper h4{
 	position:relative;
 	margin-top: 0px;
 	z-index: 10;
@@ -162,7 +162,7 @@
 .popup{
 	position: absolute;
 	left: -30px;
-	top: 110px;
+	top: 130px;
 	clear: both;
 	z-index: 100;
 	width: 276px;
