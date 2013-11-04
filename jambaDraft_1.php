@@ -5,7 +5,7 @@
 ?>
 <html>
 <head>
-	<title>Jamba Juice Menu</title>
+	<title>JAMBA!</title>
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
 	<link rel="stylesheet" type='html/css' href="jambaDraft_1.css">
@@ -195,11 +195,9 @@
 
 							<img src="pic/Razzamatazz.jpg" alt="">
 							<p>Razzamatazz
-						Dazzling you with the power of berries.
-						Your mouth won’t know which way to say “yummers!” with this super blend. Strawberries, bananas and mixed berry juice all jump in this sea of goodness to create the magnum opus of berrydom.</p>
+								Dazzling you with the power of berries.
+								Your mouth won’t know which way to say “yummers!” with this super blend. Strawberries, bananas and mixed berry juice all jump in this sea of goodness to create the magnum opus of berrydom.</p>
 						</div>
-
-
 					</div>
 
 					<div class='item_wrapper'>
@@ -326,6 +324,28 @@
 						<h3>Pomegranate Pick-Up</h3>
 						<h4>pomegranate juice, strawberries, blueberries, raspberry sherbet
 						</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/PomegranatePickmeup.jpg" alt="">
+							<p>A unique way to lift your day. Pomegranates are the shy but sincerely cool kids of the fruit world. But give this ruby-gemmed wonder some strawberries, blueberries and raspberry sherbet and she comes out of her shell. Here’s to the new life of the party.</p>
+						</div>
 					</div>
 			
 					<div class='item_wrapper'>
@@ -369,29 +389,138 @@
 					
 					<div class='item_wrapper'>
 						<h3>Strawberry Whirl</h3>
-						<h4>strawberries, bananas, apple-strawberry juice</h4>							
+						<h4>strawberries, bananas, apple-strawberry juice</h4>	
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/StrawberryWhirl.jpg" alt="">
+							<p>desc</p>
+						</div>						
 					</div>	
 				
 					<div class='item_wrapper'>
 						<h3>Mega Mango</h3>
 						<h4>mangos, strawberries, orange juice, pineapple juice</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/MegaMango.jpg" alt="">
+							<p>Whoa, that’s one big mango.
+								Gaze upon our towering monolith to the mango. We offer up strawberries, exotic juices and of course piles of mangos in order to appease our mighty lord of the fruits. It is good, and he is pleased.</p>
+						</div>
 					</div>
 				
 					<div class='item_wrapper'>
-							<h3>Pomegranate Paradise</h3>
-							<h4>pomegranate juice, strawberries, mangos, peaches</h4>
+						<h3>Pomegranate Paradise</h3>
+						<h4>pomegranate juice, strawberries, mangos, peaches</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/PomegranateParadise.jpg" alt="">
+							<p>desc</p>
+						</div>
 					</div>
 				
 					<div class='item_wrapper'>
-							<h3>Peach Perfection</h3>
-							<h4>peaches, mangos, strawberries, peach and apple-strawberry juice 
-							</h4>
+						<h3>Peach Perfection</h3>
+						<h4>peaches, mangos, strawberries, peach and apple-strawberry juice</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/PeachPerfection.jpg" alt="">
+							<p>No fruit is more fastidious. The peach is very particular about her associates. Mangos, strawberries and two kinds of fruit juice ensure that she’s always seen with the right people. After all, she has a reputation to maintain.</p>
+						</div>
 					</div>
 					
 					<div class='item_wrapper'>
-							<h3>Five Fruit Frenzy</h3>
-							<h4>strawberries, bananas, peaches, mango, blueberries, peach juice, berry juice
-							</h4>
+						<h3>Five Fruit Frenzy</h3>
+						<h4>strawberries, bananas, peaches, mango, blueberries, peach juice, berry juice</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/FiveFruitFrenzy.jpg" alt="">
+							<p>desc</p>
+						</div>
 					</div>	
 			</div>
 			<div class='smalltab'></div>
@@ -407,17 +536,81 @@
 						<h3></h3>
 						<h4>
 						</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/name.jpg" alt="">
+							<p>desc</p>
+						</div>
 					</div>
 					<div class='item_wrapper'>
 						<h3> Chocolate Moo'd</h3>
-						<h4>chocolate moo'd base, nonfat frozen yogurt
-						</h4>
+						<h4>chocolate moo'd base, nonfat frozen yogurt</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/ChocolateMood.jpg" alt="">
+							<p>Because you’re always in the mood. Chocolate has been engineered to creep into your innermost thoughts, sabotaging productivity and creating maddening distractions. Fight back with this blend of nonfat vanilla frozen yogurt and creamy chocolate blend. Take back your mind!</p>
+						</div>
 					</div>
 		
 					<div class='item_wrapper'>
 						<h3>Orange Dream Machine</h3>
-						<h4>orange juice, orange sherbet, soymilk, nonfat frozen yogurt
-						</h4>
+						<h4>orange juice, orange sherbet, soymilk, nonfat frozen yogurt</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/OrangeDream.jpg" alt="">
+							<p>Feed your dreams. Thoughts of this amazing smoothie occupy your every waking moment and invade your slumber. Visions of orange juice, orange sherbet and nonfat vanilla frozen yogurt dancing together fill your nights. Isn’t it time you made this dream come true?</p>
+						</div>
 					</div>
 				
 			</div>
