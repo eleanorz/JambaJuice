@@ -1,0 +1,42 @@
+.slide
+{
+	height: 400px;
+	margin-top: 10px;	
+	background-image: url("pic/finalwoodframe.jpg");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+#carousel
+{
+	display: inline-block;
+	width:800px;
+	background-color: blue;
+	height: 500px;
+}
+button
+{
+	position: absolute;
+	top: 300;
+}
+#right {
+	left: 750;
+	z-index: 4;
+}
+
+#slide1
+{
+	background-color: red;
+}
+#slide2
+{
+	background-color: green;
+}
+#slide3
+{
+	background-color: purple;
+}
+#slide4
+{
+	background-color: yellow;
+}

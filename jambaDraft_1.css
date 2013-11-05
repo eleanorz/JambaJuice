@@ -235,3 +235,48 @@
 	height: 502px;
 	width: 33px;
 }
+
+/*below for custom carousel created by trey*/
+
+.slide
+{
+	width: 960px;
+	margin-top: 10px;
+	background-image: url("pic/finalwoodframe.jpg");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+#carousel
+{
+	display: inline-block;
+	width:980px;
+/*	background-color: blue;
+*/	height: auto;
+}
+button
+{
+	position: absolute;
+	top: 380px;
+}
+#right {
+	left: 900px;
+	z-index: 4;
+}
+
+#slide1
+{
+/*	background-color: red;
+*/}
+#slide2
+{
+/*	background-color: green;
+*/}
+#slide3
+{
+/*	background-color: purple;
+*/}
+#slide4
+{
+/*	background-color: yellow;
+*/}

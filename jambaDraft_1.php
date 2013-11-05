@@ -7,13 +7,39 @@
 <head>
 	<title>JAMBA!</title>
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="carou_style.css">
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
 	<link rel="stylesheet" type='html/css' href="jambaDraft_1.css">
 	<link rel="stylesheet" type='html/css' href="slide.css">
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src='http://code.jquery.com/jquery-1.9.1.js'></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<!-- JQuery Guts --> 
+	<script>
+		function carousel()
+		{
+			var number = 0;
+			var show = 1;
+			$('.slide').hide();
+			$('.slide').first().show();
+			// $('.slide').animate({width: 'toggle'});
+			
+			
+			function spin()
+			{				
+				// $('#slide'+show).animate({width: 'toggle'}).hide();
+				$('#slide'+show).hide();
+				number++;
+				show= number%3 + 1;
+				// $('#slide'+show).animate({width: 'toggle'});
+				$('#slide'+show).show();
+			}
+			setInterval(function(){spin()},5000);
+		}
+		$(document).ready(function(){
+			carousel();
+		});
+	</script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			//line below: sets popup descriptions to hide by default
@@ -27,7 +53,7 @@
 			$(this).siblings().show(); $(this).parent().siblings().children('.bigslide').hide();$(this).parent().siblings().children('.smalltab').css('background-color','black');
 			$(this).css('background-color','orange');});
 			});
-		</script>
+	</script>
 </head>
 
 <body>
@@ -75,14 +101,12 @@
 
 	<div class='clear'></div>
 
-<div id='main_menu'>
-
-
-		
-
-<div class="clear"></div>
-<!-- BELOW IS TEST OF SLIDER JQUERY -->
-		<div id='splashslide' class='slide_container' >
+	<div id='carousel'>
+		<button id='left'>Left</button>
+		<button class='btn btn-large'> <i class='icon-chevron-left'> </button>
+		<button id='right'>Right</button>
+		<button class='btn btn-large'> <i class='icon-chevron-right'> </button>
+		<div id='slide1' class='slide' >
 			<div class='bigslide'>
 				<div class='smoothie_type'>
 					<h2>Classic Smoothies</h2>
@@ -378,10 +402,9 @@
 						</div>
 					</div>
 			</div>
-			<div class='smalltab'> tab</div>
 		</div>
 
-		<div id='slide2' class='slide_container'>
+		<div id='slide2' class='slide'>
 			<div class='bigslide'>
 				<div class='smoothie_type'>
 					<h2>All Fruit Smoothies</h2>
@@ -523,10 +546,9 @@
 						</div>
 					</div>	
 			</div>
-			<div class='smalltab'></div>
 		</div>
 
-		<div id='slide3' class='slide_container'>
+		<div id='slide3' class='slide'>
 			<div class='bigslide'>
 				<div class='smoothie_type'>
 					<h2>Creamy Treats</h2>
@@ -614,30 +636,27 @@
 					</div>
 				
 			</div>
-			<div class='smalltab'> tab</div>			
 		</div>
 <!-- ABOVE IS TEST OF SLIDER JQUERY -->
 
 
-<div class='clear'></div>
 
-<!-- CHECKOUT MODAL BELOW
- -->
+<!-- CHECKOUT MODAL BELOW -->
 
-		<div class='checkout'> 
+	<div class='clear'></div>
+		<!-- <div class='checkout'> 
 				<h1>Review My Order</h1>
 
 				<div id='enter_address'>
 					<h3> Enter current address to find nearest store</h3>
 					<input type="text" placeholder='your address'> <!-- make this tie into google API -->
-				</div>
+				<!-- </div>
 
 					<h4>Approximate time for pickup: </h4>
 					<div id='ToD'> <h2>1:15pm</h2></div>
 					<input type="submit" value='change'>		
+			</div> -->
 
-		</div>
-	
 	</div>
 </div>
 </body>

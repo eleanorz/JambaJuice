@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="carou_style.css">
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.9.1.js'></script>
 	<script>
 		function carousel()
