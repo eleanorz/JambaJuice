@@ -6,6 +6,7 @@
 <html>
 <head>
 	<title>JAMBA!</title>
+	<link href="../../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="carou_style.css">
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
@@ -102,10 +103,8 @@
 	<div class='clear'></div>
 
 	<div id='carousel'>
-		<button id='left'>Left</button>
-		<button class='btn btn-large'> <i class='icon-chevron-left'> </button>
-		<button id='right'>Right</button>
-		<button class='btn btn-large'> <i class='icon-chevron-right'> </button>
+  		<button id='left' class='btn btn-large' value=""> <i class='icon-chevron-left'> </i></button>
+		<button id='right' class='btn btn-large'> <i class='icon-chevron-right'> </i> </button>
 		<div id='slide1' class='slide' >
 			<div class='bigslide'>
 				<div class='smoothie_type'>
