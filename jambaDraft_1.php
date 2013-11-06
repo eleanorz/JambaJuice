@@ -8,10 +8,8 @@
 	<title>JAMBA!</title>
 	<link href="../../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="carou_style.css">
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
 	<link rel="stylesheet" type='html/css' href="jambaDraft_1.css">
-	<link rel="stylesheet" type='html/css' href="slide.css">
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.9.1.js'></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
@@ -37,8 +35,16 @@
 			}
 			setInterval(function(){spin()},5000);
 		}
+		function goLeft()
+		{
+
+		}
+		function goRight()
+		{
+
+		}
 		$(document).ready(function(){
-			carousel();
+			// carousel();
 		});
 	</script>
 	<script type="text/javascript">
@@ -103,305 +109,315 @@
 	<div class='clear'></div>
 
 	<div id='carousel'>
-  		<button id='left' class='btn btn-large' value=""> <i class='icon-chevron-left'> </i></button>
-		<button id='right' class='btn btn-large'> <i class='icon-chevron-right'> </i> </button>
+  		<button id='left' class='btn btn-inverse btn-large' value=""> <i class='icon-chevron-left icon-white'> </i></button>
+		<button id='right' class='btn btn-inverse btn-large'> <i class='icon-chevron-right icon-white'> </i> </button>
 		<div id='slide1' class='slide' >
-			<div class='bigslide'>
-				<div class='smoothie_type'>
-					<h2>Classic Smoothies</h2>
-				</div>	
-				
-					<div class='item_wrapper'>
-						<h3>Peach Pleasure</h3>
-						<h4>peaches, bananas, peach juice, orange sherbet</h4>
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
+				<div class='bigslide'>
+					<div class='smoothie_type'>
+						<h2>Classic Smoothies</h2>
+					</div>
 
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
-
-							<img src="pic/PeachPleasure.jpg" alt="peachpls">
-							<p>Peach Pleasure Smoothie Let’s give you some cold fuzzies.  Lounge beneath a shady tree with this blend of peaches, bananas and orange sherbet and while away your carefree afternoon wondering who will accompany you to the ball.</p>
-						</div>
-					</div>	
-				
+					<div id='column1' class='column'>
 					
-					<div class='item_wrapper'>
-						<h3> Strawberry Surf Rider</h3>
-						<h4>strawberries, peaches, lemonade, lime sherbet</h4>
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
+						<div class='item_wrapper'>
+							<h3>Peach Pleasure</h3>
+							<h4>peaches, bananas, peach juice, orange sherbet</h4>
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
 
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
 
-							<img src="pic/StrawberrySurfrider.jpg" alt="strawsurf">
-							<p>Hang ten and all that. Let’s be honest: Strawberries can’t surf. That’s what the peaches are for. Enjoy some peaches teaching strawberries how to surf on an ocean of lemonade next to beaches made of lime sherbet. It’s radical.</p>
-						</div>
-					</div>
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
 
-					<div class='item_wrapper'>
-						<h3>Mango-A-Go-Go</h3>
-						<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
+								<img src="pic/PeachPleasure.jpg" alt="peachpls">
+								<p>Peach Pleasure Smoothie Let’s give you some cold fuzzies.  Lounge beneath a shady tree with this blend of peaches, bananas and orange sherbet and while away your carefree afternoon wondering who will accompany you to the ball.</p>
+							</div>
+						</div>	
 					
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
-
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
-
-							<img src="pic/MangoAgogo.jpg" alt="mango">
-							<p>These mangos will get you movin’! Are you the president of the Mango Appreciation Society? Do you count mangos to fall asleep? Then welcome to paradise. We blend heaps of mangos and passion fruit-mango juice topped off with pineapple sherbet to make your dreams come true.</p>
-						</div>
-					</div>
-				
-					<div class='item_wrapper'>
-						<h3>Razzmatazz</h3>
-						<h4>mixed berry juice, strawberries, bananas, orange sherbet
-						</h4>
-						<div class='popup'> 
-							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
-
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
-
-							<img src="pic/Razzamatazz.jpg" alt="">
-							<p>Razzamatazz
-								Dazzling you with the power of berries.
-								Your mouth won’t know which way to say “yummers!” with this super blend. Strawberries, bananas and mixed berry juice all jump in this sea of goodness to create the magnum opus of berrydom.</p>
-						</div>
-					</div>
-
-					<div class='item_wrapper'>
-						<h3>Strawberries Wild</h3>
-						<h4>strawberries, bananas, apple-strawberry juice, nonfat frozen yogurt
-						</h4>
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
-
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
-
-							<img src="pic/StrawberryWild.jpg" alt="strawwild">
-							<p>Strawberries Wild
-								Free-range strawberry goodness.
-								It’s a little known fact that, in the wild, strawberries are drawn to bananas and frozen yogurt. If you’re really lucky you’ll get a glimpse of them making juice with some apples. Good thing we know this; the results are delicious.</p>
-						</div>
-					</div>
-			
-					<div class='item_wrapper'>
-						<h3>Caribbean Passion</h3>
-						<h4> passionfruit-mango juice, strawberries, peaches, orange sherbet
-						</h4>
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
-
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
-
-							<img src="pic/CarribeanPassion.jpg" alt="carpas">
-							<p>Caribbean Passion Smoothie
-								Beat the heat, the island way.
-								Get whisked away to a lush tropical island by a blend of strawberries, peaches, passion fruit-mango juice and orange sherbet. Are you being serenaded by birds of paradise? No, that’s a car horn; you’re daydreaming in the parking lot again.</p>
-						</div>
-					</div>
-			
-					<div class='item_wrapper'>
-						<h3>Banana Berry</h3>
-						<h4>bananas, blueberries, apple-strawberry juice, raspberry sherbet, nonfat frozen yogurt
-						</h4>
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
-
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-
-								<input type="hidden" name="action" value="Add to Cart">
-								<input type="submit" value="Add to Order">
-							</form>
-
-							<img src="pic/BananaBerry.jpg" alt="banber">
-							<p>Banana Berry Smoothie
-								Bursting at the seams with berries!
-								These bananas came to party and they brought all of their friends. Strawberries, blueberries and raspberry sherbet take this smoothie to the next level. Maximum volume isn’t good enough; this smoothie turns it up to 11. </p>
-						</div>
-					</div>
-			
-					<div class='item_wrapper'>
-						<h3>Orange-A-Peel</h3>
-						<h4>orange juice, strawberries, bananas, frozen yogurt
-						</h4>
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
-
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
-
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
-
-							<img src="pic/Orangeapeel.jpg" alt="orgpl">
-							<p>Orange-A-Peel Smoothie
-								The best of both worlds.
-								Is it possible that we’ve struck a balance between sweet and tart, ending that conflict for good? Will combining strawberries, bananas, orange juice, and frozen yogurt create smoothie nirvana? We do believe so.</p>
-						</div>
-					</div>
 						
-					<div class='item_wrapper'>
-						<h3>Pomegranate Pick-Up</h3>
-						<h4>pomegranate juice, strawberries, blueberries, raspberry sherbet
-						</h4>
-						<div class='popup'> 
-							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
+						<div class='item_wrapper'>
+							<h3> Strawberry Surf Rider</h3>
+							<h4>strawberries, peaches, lemonade, lime sherbet</h4>
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
 
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
 
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
+								<img src="pic/StrawberrySurfrider.jpg" alt="strawsurf">
+								<p>Hang ten and all that. Let’s be honest: Strawberries can’t surf. That’s what the peaches are for. Enjoy some peaches teaching strawberries how to surf on an ocean of lemonade next to beaches made of lime sherbet. It’s radical.</p>
+							</div>
+						</div>
 
-							<img src="pic/PomegranatePickmeup.jpg" alt="">
-							<p>A unique way to lift your day. Pomegranates are the shy but sincerely cool kids of the fruit world. But give this ruby-gemmed wonder some strawberries, blueberries and raspberry sherbet and she comes out of her shell. Here’s to the new life of the party.</p>
+						<div class='item_wrapper'>
+							<h3>Mango-A-Go-Go</h3>
+							<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
+						
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
+
+								<img src="pic/MangoAgogo.jpg" alt="mango">
+								<p>These mangos will get you movin’! Are you the president of the Mango Appreciation Society? Do you count mangos to fall asleep? Then welcome to paradise. We blend heaps of mangos and passion fruit-mango juice topped off with pineapple sherbet to make your dreams come true.</p>
+							</div>
+						</div>
+					
+						<div class='item_wrapper'>
+							<h3>Razzmatazz</h3>
+							<h4>mixed berry juice, strawberries, bananas, orange sherbet
+							</h4>
+							<div class='popup'> 
+								<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
+
+								<img src="pic/Razzamatazz.jpg" alt="">
+								<p>Razzamatazz
+									Dazzling you with the power of berries.
+									Your mouth won’t know which way to say “yummers!” with this super blend. Strawberries, bananas and mixed berry juice all jump in this sea of goodness to create the magnum opus of berrydom.</p>
+							</div>
+						</div>
+
+						<div class='item_wrapper'>
+							<h3>Strawberries Wild</h3>
+							<h4>strawberries, bananas, apple-strawberry juice, nonfat frozen yogurt
+							</h4>
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
+
+								<img src="pic/StrawberryWild.jpg" alt="strawwild">
+								<p>Strawberries Wild
+									Free-range strawberry goodness.
+									It’s a little known fact that, in the wild, strawberries are drawn to bananas and frozen yogurt. If you’re really lucky you’ll get a glimpse of them making juice with some apples. Good thing we know this; the results are delicious.</p>
+							</div>
 						</div>
 					</div>
-			
-					<div class='item_wrapper'>
-						<h3>Aloha Pineapple</h3>
-						<h4>pineapple juice, strawberries, bananas, pineapple sherbet, nonfat plain yogurt
-						</h4>
-						<div class='popup'> 
-							<form name="drink_form" action="process.php" method="post">
-								<select name='number_drinks'>
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								</select>
+					<div id='column2' class='column'>
+				
+						<div class='item_wrapper'>
+							<h3>Caribbean Passion</h3>
+							<h4> passionfruit-mango juice, strawberries, peaches, orange sherbet
+							</h4>
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
 
-								<select name="size">
-								  <option value="16oz">16 oz - $2.50</option>
-								  <option value="22oz">22 oz - $3.50</option>
-								  <option value="30oz">30 oz - $3.99</option>
-								</select>
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
 
-								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
-							</form>
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
 
-							<img src="pic/PineappleAloha.jpg" alt="pinealoha">
-							<p>Aloha Pineapple Smoothie
-								It’s a luau for your mouth!
-								Dream of relaxing on black sand beaches beneath waving palm trees and cooling off with this blend of strawberries, bananas, and pineapple sherbet. Gigantic sunbrella and tiki bar not included.</p>
+								<img src="pic/CarribeanPassion.jpg" alt="carpas">
+								<p>Caribbean Passion Smoothie
+									Beat the heat, the island way.
+									Get whisked away to a lush tropical island by a blend of strawberries, peaches, passion fruit-mango juice and orange sherbet. Are you being serenaded by birds of paradise? No, that’s a car horn; you’re daydreaming in the parking lot again.</p>
+							</div>
 						</div>
-					</div>
+				
+						<div class='item_wrapper'>
+							<h3>Banana Berry</h3>
+							<h4>bananas, blueberries, apple-strawberry juice, raspberry sherbet, nonfat frozen yogurt
+							</h4>
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+
+									<input type="hidden" name="action" value="Add to Cart">
+									<input type="submit" value="Add to Order">
+								</form>
+
+								<img src="pic/BananaBerry.jpg" alt="banber">
+								<p>Banana Berry Smoothie
+									Bursting at the seams with berries!
+									These bananas came to party and they brought all of their friends. Strawberries, blueberries and raspberry sherbet take this smoothie to the next level. Maximum volume isn’t good enough; this smoothie turns it up to 11. </p>
+							</div>
+						</div>
+				
+						<div class='item_wrapper'>
+							<h3>Orange-A-Peel</h3>
+							<h4>orange juice, strawberries, bananas, frozen yogurt
+							</h4>
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
+
+								<img src="pic/Orangeapeel.jpg" alt="orgpl">
+								<p>Orange-A-Peel Smoothie
+									The best of both worlds.
+									Is it possible that we’ve struck a balance between sweet and tart, ending that conflict for good? Will combining strawberries, bananas, orange juice, and frozen yogurt create smoothie nirvana? We do believe so.</p>
+							</div>
+						</div>
+							
+						<div class='item_wrapper'>
+							<h3>Pomegranate Pick-Up</h3>
+							<h4>pomegranate juice, strawberries, blueberries, raspberry sherbet
+							</h4>
+							<div class='popup'> 
+								<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
+
+								<img src="pic/PomegranatePickmeup.jpg" alt="">
+								<p>A unique way to lift your day. Pomegranates are the shy but sincerely cool kids of the fruit world. But give this ruby-gemmed wonder some strawberries, blueberries and raspberry sherbet and she comes out of her shell. Here’s to the new life of the party.</p>
+							</div>
+						</div>
+				
+						<div class='item_wrapper'>
+							<h3>Aloha Pineapple</h3>
+							<h4>pineapple juice, strawberries, bananas, pineapple sherbet, nonfat plain yogurt
+							</h4>
+							<div class='popup'> 
+								<form name="drink_form" action="process.php" method="post">
+									<select name='number_drinks'>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									</select>
+
+									<select name="size">
+									  <option value="16oz">16 oz - $2.50</option>
+									  <option value="22oz">22 oz - $3.50</option>
+									  <option value="30oz">30 oz - $3.99</option>
+									</select>
+
+									<input type="hidden" name="action" value="add_to_cart">
+									<input type="submit" value="Add to Order">
+								</form>
+
+								<img src="pic/PineappleAloha.jpg" alt="pinealoha">
+								<p>Aloha Pineapple Smoothie
+									It’s a luau for your mouth!
+									Dream of relaxing on black sand beaches beneath waving palm trees and cooling off with this blend of strawberries, bananas, and pineapple sherbet. Gigantic sunbrella and tiki bar not included.</p>
+							</div>
+						</div>
+				</div>
 			</div>
 		</div>
+
+
+		<div id='column1' class='column'></div>
+		<div id='column1' class='column'></div>
+		<div id='column2' class='column'></div>
 
 		<div id='slide2' class='slide'>
 			<div class='bigslide'>
