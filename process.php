@@ -1,6 +1,10 @@
 <?php 
+
 session_start();
 //WARNING!!  currently subject to mysql injection , but, I am not yet ready to connect to a database, will adjust later on!
+
+// $_SESSION['total_drinks']=0;
+
 
 if (isset($_SESSION['total_drinks'])==FALSE) 
 {
@@ -24,5 +28,13 @@ if(isset($_POST['action']) AND $_POST['action'] == 'add_to_cart')
 	// die();
 	header('location: jambaDraft_1.php');
 }
+
+if(isset($_POST['action']) AND $_POST['action'] == 'clear_cart')
+{
+	$_SESSION['total_drinks']=0;
+	header('location: jambaDraft_1.php');
+}
+
+
 
 ?>
