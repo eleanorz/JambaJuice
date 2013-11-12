@@ -15,16 +15,16 @@
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<!-- JQuery Guts --> 
 	<script>
-		function carousel()
+		function Carousel()
 		{
 			var number = 0;
 			var show = 1;
+			
 			$('.slide').hide();
 			$('.slide').first().show();
 			// $('.slide').animate({width: 'toggle'});
 			
-			
-			function spin()
+			this.spin = function()
 			{				
 				// $('#slide'+show).animate({width: 'toggle'}).hide();
 				$('#slide'+show).hide();
@@ -33,33 +33,41 @@
 				// $('#slide'+show).animate({width: 'toggle'});
 				$('#slide'+show).show();
 			}
-			setInterval(function(){spin()},5000);
+			this.reverseSpin = function()
+			{				
+				// $('#slide'+show).animate({width: 'toggle'}).hide();
+				$('#slide'+show).hide();
+				number--;
+				show= number%3 + 1;
+				// $('#slide'+show).animate({width: 'toggle'});
+				$('#slide'+show).show();
+			}
 		}
-		function goLeft()
-		{
 
-		}
-		function goRight()
-		{
-
-		}
 		$(document).ready(function(){
-			// carousel();
+			var carousel = new Carousel();
+
+			$('#left').click(function(){
+				carousel.reverseSpin();
+			});
+
+			$('#right').click(function(){
+				carousel.spin();
+			});
+
+			setInterval(function(){carousel.spin()},3000);
+
 		});
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			//line below: sets popup descriptions to hide by default
 			$('.item_wrapper').children(".popup").hide();
-			//line below: handles toggling the pop-up, and changes background color to pink during hover
+			//line below: handles toggling the pop-up, and changes background color to white during hover
 			$('.item_wrapper').hover(function(){$(this).children('.popup').slideToggle();$(this).css('background-color', 'white');$(this).css("color", "black");}, function(){$(this).children('.popup').hide();$(this).css("background-color", "transparent");$(this).css("color", "white");});
-			//below handles chalkboard slides movement
-			$('#splashslide').siblings().children('.bigslide').hide();
-			$('#splashslide').siblings().children('.smalltab').css('background-color','black');
-			$('.smalltab').hover(function(){
-			$(this).siblings().show(); $(this).parent().siblings().children('.bigslide').hide();$(this).parent().siblings().children('.smalltab').css('background-color','black');
-			$(this).css('background-color','orange');});
+						
 			});
+	
 	</script>
 </head>
 
@@ -669,6 +677,33 @@ clear button -->
 	</form>
 
 	<div class='clear'></div>
+
+		<!-- Button trigger modal -->
+<!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
 		<!-- <div class='checkout'> 
 				<h1>Review My Order</h1>
 

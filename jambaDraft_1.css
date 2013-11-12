@@ -267,6 +267,13 @@ button
 	position: absolute;
 	top: 410px;
 }
+
+button.modal
+{
+	position: relative;
+	top: 20px;
+}
+
 #left{
 	left: 0px;
 }

@@ -8,3 +8,19 @@ add in column divs for the other 2 slides;
 -make cart work.
 -add in tooltips.
 -done.
+
+
+	// object- card:
+	// -randomly generated from 1-52
+	// -color: black or red
+	// -suit
+	// -number
+
+	// object deck:
+	// randomly generates 52 cards in the correct suit
+
+	// number game decks;
+
+	// middle piles
+
+	// -if card = ace, send to middle;
