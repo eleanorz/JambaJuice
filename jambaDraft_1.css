@@ -262,10 +262,22 @@
 	width:980px;
 	height: auto;
 }
-button
+
+#left, #right
 {
 	position: absolute;
 	top: 410px;
+}
+
+#left
+{
+	left: 0px;
+}
+
+#right 
+{
+	left: 1027px;
+	z-index: 4;
 }
 
 #specialbutton button
@@ -274,14 +286,6 @@ button
 	top: 20px;
 }
 
-#left{
-	left: 0px;
-}
-#right 
-{
-	left: 1027px;
-	z-index: 4;
-}
 
 #slide1
 {}

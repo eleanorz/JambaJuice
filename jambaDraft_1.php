@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 
 <?php 
 	session_start();
@@ -7,7 +8,6 @@
 <head>
 	<title>JAMBA!</title>
 	<link href="../../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
-
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
 	<link rel="stylesheet" type='html/css' href="jambaDraft_1.css">
@@ -59,6 +59,7 @@
 
 			setInterval(function(){carousel.spin()},3000);
 
+			
 		});
 	</script>
 	<script type="text/javascript">
@@ -71,6 +72,7 @@
 			});
 	
 	</script>
+
 </head>
 
 <body>
@@ -80,7 +82,9 @@
 		<div id='jamba_text'>
 			<img src="pic/jambajuice_text_wide.jpg" alt="jamba juice">
 		</div>
-		<div id='drinkhold'>
+
+		<a data-toggle="modal" href="#myModal">
+			<div id='drinkhold'>
 			<img src="pic/
 				<?php 
 					if (!isset($_SESSION['total_drinks'])) {
@@ -103,7 +107,7 @@
 						echo "three_carrier.jpg style='height:20px;width:100px;'";
 					}
 
-			 	?>" alt="holder">
+			 	?>" href='google.com' alt="holder">
 			<div id='testcupholderdata'>
 
 				<?php 
@@ -115,7 +119,8 @@
 				?>
 
 			</div>
-		</div>
+			</div>
+		</a>
 		<h1> order for pick-up with three clicks</h1>
 	</div>
 
@@ -682,30 +687,74 @@ clear button -->
 
 		<!-- Button trigger modal -->
 
+	<div class="myBox">
+     blah blah blah.
+    <a href="http://google.com">link</a>
+</div>
+
 	<div id='specialbutton'><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
 		  Launch demo modal
 		</button>
 	</div>
 
 
-<!-- Modal -->
+<!-- First -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel"> Confirm your order</h4>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss='modal' data-toggle="modal" href="#myModal2"> Proceed to checkout</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Enter Payment</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#myModal">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss='modal' data-toggle="modal" href="#myModal3"> Order</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Thank you</h4>
+      </div>
+      <div class="modal-body">
+        Your order will be ready for pickup at the bellevue location, in approximately 30 minutes
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
 
 
 
