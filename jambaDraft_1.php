@@ -729,8 +729,7 @@
 							</form>
 
 							<img src="pic/Greenteamatcha.jpg" alt="">
-							<p>
-Stay calm, have a smoothie. Find your center with this blend of nonfat vanilla frozen yogurt, sorbet and Matcha Green Tea. Banish all negative thoughts, reach for your toes and take a sip of your smoothie. Now look to the sun; you’ve found your center.</p>
+							<p>Stay calm, have a smoothie. Find your center with this blend of nonfat vanilla frozen yogurt, sorbet and Matcha Green Tea. Banish all negative thoughts, reach for your toes and take a sip of your smoothie. Now look to the sun; you’ve found your center.</p>
 						</div>
 					</div>						
 				</div>				
@@ -751,7 +750,16 @@ Stay calm, have a smoothie. Find your center with this blend of nonfat vanilla f
 		      </div>
 		      <div class="modal-body">
 		        <?php 
-		        	var_dump($_SESSION);
+		        	// var_dump($_SESSION['order_array']);
+		        	$a=$_SESSION['order_array'];
+
+		        	echo "<ul>";
+
+		        	foreach ($a as $key => $order_row) {
+		        		echo '<tr>'.var_dump($order_row).'</tr>';
+		        	}
+
+		        	echo "</ul>";
 		        ?>
 	        	<form name="clear_cart" action="process.php" method="post">		
 					<input type="hidden" name="action" value="clear_cart">
