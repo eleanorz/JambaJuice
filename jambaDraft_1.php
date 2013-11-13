@@ -6,7 +6,8 @@
 ?>
 <html>
 <head>
-	<title>JAMBA!</title>
+	<title>Order Jamba Online</title>
+	<link rel="icon" type="image/ico" href="http://jambajuice.com/images/www/tempIMGs/favicon.ico">
 	<link href="../../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
@@ -16,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<script src="../../bootstrap/docs/assets/js/bootstrap.min.js"></script>
 	<!-- JQuery Guts --> 
-	<script>
+	<script type="text/javascript">
 		function Carousel()
 		{
 			var number = 0;
@@ -48,6 +49,7 @@
 
 		$(document).ready(function(){
 			var carousel = new Carousel();
+			var isSpin = 0;
 
 			$('#left').click(function(){
 				carousel.reverseSpin();
@@ -57,21 +59,28 @@
 				carousel.spin();
 			});
 
-			setInterval(function(){carousel.spin()},3000);
 
-			
-		});
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function(){
 			//line below: sets popup descriptions to hide by default
 			$('.item_wrapper').children(".popup").hide();
 			//line below: handles toggling the pop-up, and changes background color to white during hover
-			$('.item_wrapper').hover(function(){$(this).children('.popup').slideToggle();$(this).css('background-color', 'white');$(this).css("color", "black");}, function(){$(this).children('.popup').hide();$(this).css("background-color", "transparent");$(this).css("color", "white");});
-						
-			});
-	
+			$('.item_wrapper').hover(function(){$(this).children('.popup').slideToggle();$(this).css('background-color', 'white');$(this).css("color", "black"); isSpin=1;}, function(){$(this).children('.popup').hide();$(this).css("background-color", "transparent");$(this).css("color", "white");isSpin=0;});
+								
+			// true/ if spin false
+			
+			// setInterval(function(){carousel.spin()},6000);
+
+			// if(isSpin==1)
+			// {
+			// 	setInterval(function(){carousel.spin()},10000);				
+			// }
+
+			data-dismiss='modal';
+		});
 	</script>
+	<script type="text/javascript">
+	// 	$(document).ready(function(){	});
+	
+	// </script>
 
 </head>
 
@@ -155,6 +164,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Peach Pleasure'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -166,7 +176,7 @@
 				
 					
 					<div class='item_wrapper'>
-						<h3> Strawberry Surf Rider</h3>
+						<h3>Strawberry Surf Rider</h3>
 						<h4>strawberries, peaches, lemonade, lime sherbet</h4>
 						<div class='popup'> 
 							<form name="drink_form" action="process.php" method="post">
@@ -182,6 +192,8 @@
 								  <option value="22oz">22 oz - $3.50</option>
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
+
+								<input type="hidden" name='drinkname' value='Strawberry Surf Rider'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -587,9 +599,8 @@
 				</div>
 				<div id='column1' class='column'>
 					<div class='item_wrapper'>
-						<h3></h3>
-						<h4>
-						</h4>
+						<h3>Peanut Butter Moo'd® Smoothie</h3>
+						<h4>Peanut butter, bananas, nonfat vanilla frozen yogurt and milk chocolate</h4>
 						<div class='popup'> 
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
@@ -609,13 +620,13 @@
 								<input type="submit" value="Add to Order">
 							</form>
 
-							<img src="pic/name.jpg" alt="">
-							<p>desc</p>
+							<img src="pic/PeanutbutterMood.jpg" alt="">
+							<p>Almost too delicious.These cows sure know what we like. Peanut butter, bananas, nonfat vanilla frozen yogurt and our chocolate moo’d milk chocolate are the perfect combination to lure us in. Why are they keeping us happy and docile? We’re on to you, cows!</p>
 						</div>
 					</div>
 					<div class='item_wrapper'>
 						<h3> Chocolate Moo'd</h3>
-						<h4>chocolate moo'd base, nonfat frozen yogurt</h4>
+						<h4>nonfat vanilla frozen yogurt and milk chocolate</h4>
 						<div class='popup'> 
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
@@ -666,110 +677,144 @@
 						</div>
 					</div>					
 				</div>
-				<div id='column2' class='column'>					
+				<div id='column2' class='column'>
+
+					<div class='item_wrapper'>
+						<h3>Pumpkin Smash</h3>
+						<h4>real pumpkin blended with frozen yogurt and a hint of cinnamon and nutmeg</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/pumpkinsmash.jpg" alt="">
+							<p>Pumpkin Pie’s Fitter, Cooler Cousin. This deliciously creamy treat celebrates autumn’s most iconic fruit! This Fall classic of real pumpkin blended with frozen yogurt and a hint of cinnamon and nutmeg will have you dreaming of Grammy’s homemade pumpkin pie.</p>
+						</div>
+					</div>						
+		
+					<div class='item_wrapper'>
+						<h3>Matcha Green Tea Blast</h3>
+						<h4>nonfat vanilla frozen yogurt, sorbet and Matcha Green Tea</h4>
+						<div class='popup'> 
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" value="Add to Order">
+							</form>
+
+							<img src="pic/Greenteamatcha.jpg" alt="">
+							<p>
+Stay calm, have a smoothie. Find your center with this blend of nonfat vanilla frozen yogurt, sorbet and Matcha Green Tea. Banish all negative thoughts, reach for your toes and take a sip of your smoothie. Now look to the sun; you’ve found your center.</p>
+						</div>
+					</div>						
 				</div>				
 			</div>
 		</div>
 <!-- ABOVE IS CAROUSEL -->
 
-
-
-<!-- CHECKOUT MODAL BELOW -->
-<!-- 
-clear button -->
-
-	<form value="add_to_cart" name="clear_cart" action="process.php" method="post">		
-		<input type="hidden" name="action" value="clear_cart">
-		<input type="submit" value="clear cart">
-	</form>
-
 	<div class='clear'></div>
+			
+	<div id='AllModals'>
+		<!-- First Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss='modal' aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel"> Confirm your order</h4>
+		      </div>
+		      <div class="modal-body">
+		        <?php 
+		        	var_dump($_SESSION);
+		        ?>
+	        	<form name="clear_cart" action="process.php" method="post">		
+					<input type="hidden" name="action" value="clear_cart">
+					<input type="submit" value="clear cart">
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss='modal'>Back</button>
+		        <button type="button" class="btn btn-primary" data-dismiss='modal' data-toggle="modal" href="#myModal2"> Proceed to checkout</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!-- Modal -->
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss='modal' aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Enter Payment</h4>
+		      </div>
+		      <div class="modal-body">
+				<div class='checkout'> 
+						<h1>Review My Order</h1>
 
-		<!-- Button trigger modal -->
+						<div id='enter_address'>
+							<h3> Enter current address to find nearest store</h3>
+							<input type="text" placeholder='your address'> make this tie into google API
+						</div>
 
-	<div class="myBox">
-     blah blah blah.
-    <a href="http://google.com">link</a>
-</div>
+							<h4>Approximate time for pickup: </h4>
+							<div id='ToD'> <h2>1:15pm</h2></div>
+							<input type="submit" value='change'>		
+				</div>
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#myModal">Back</button>
+		        <button type="button" class="btn btn-primary" data-dismiss='modal' data-toggle="modal" href="#myModal3"> Order</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!-- Modal -->
+		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Thank you</h4>
+		      </div>
+		      <div class="modal-body">
+		        Your order will be ready for pickup at the bellevue location, in approximately 30 minutes
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div>
 
-	<div id='specialbutton'><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-		  Launch demo modal
-		</button>
 	</div>
 
-
-<!-- First -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel"> Confirm your order</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
-        <button type="button" class="btn btn-primary" data-dismiss='modal' data-toggle="modal" href="#myModal2"> Proceed to checkout</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!-- Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Enter Payment</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#myModal">Back</button>
-        <button type="button" class="btn btn-primary" data-dismiss='modal' data-toggle="modal" href="#myModal3"> Order</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!-- Modal -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Thank you</h4>
-      </div>
-      <div class="modal-body">
-        Your order will be ready for pickup at the bellevue location, in approximately 30 minutes
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
-
-
-
-
-		<!-- <div class='checkout'> 
-				<h1>Review My Order</h1>
-
-				<div id='enter_address'>
-					<h3> Enter current address to find nearest store</h3>
-					<input type="text" placeholder='your address'> <!-- make this tie into google API -->
-				<!-- </div>
-
-					<h4>Approximate time for pickup: </h4>
-					<div id='ToD'> <h2>1:15pm</h2></div>
-					<input type="submit" value='change'>		
-			</div> -->
 
 	</div>
 </div>

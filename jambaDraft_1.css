@@ -13,7 +13,7 @@
 	margin-left: 55px;
 	width: 1050px;
 /*	font-family: 'Jura', sans-serif;
-*/	font-family: 'robgravesmedium', Arial, sans-serif;
+	font-family: 'robgravesmedium', Arial, sans-serif;*/
 /*	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 */}
 
@@ -284,6 +284,15 @@
 {
 	position: relative;
 	top: 20px;
+}
+
+.modal-body
+{
+	height: 500px;
+}
+
+.modal{
+	height: auto;
 }
 
 
