@@ -11,11 +11,11 @@
 	<link href="../../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
-	<link rel="stylesheet" type='html/css' href="jambaDraft_1.css">
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.9.1.js'></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<script src="../../bootstrap/docs/assets/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type='html/css' href="jambaDraft_1.css">
 	<!-- JQuery Guts --> 
 	<script type="text/javascript">
 		function Carousel()
@@ -59,7 +59,13 @@
 				carousel.spin();
 			});
 
+			$('#drinkhold').click(function(){
+				$('#AllModals').show();
+;
+			});
 
+			// setting modal elements to hide by default so as to not interrupt hover functions
+			$('#AllModals').hide();
 			//line below: sets popup descriptions to hide by default
 			$('.item_wrapper').children(".popup").hide();
 			//line below: handles toggling the pop-up, and changes background color to white during hover
@@ -74,13 +80,26 @@
 			// 	setInterval(function(){carousel.spin()},10000);				
 			// }
 
-			data-dismiss='modal';
 		});
 	</script>
-	<script type="text/javascript">
-	// 	$(document).ready(function(){	});
-	
-	// </script>
+	<script>
+		<?php 
+			function printOrderRow($lineArray)
+			{
+				foreach ($lineArray as $key => $l)
+				{
+					echo "<td>   ".$l."... </td>";
+				}
+			}
+
+			function printDeleteButton()
+			{
+				echo "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+";
+				// echo "<button type='button' aria-hidden='true'>&times;</button>";
+			}
+		 ?>
+	</script>
 
 </head>
 
@@ -749,17 +768,18 @@
 		        <h4 class="modal-title" id="myModalLabel"> Confirm your order</h4>
 		      </div>
 		      <div class="modal-body">
-		        <?php 
+		        <?php
 		        	// var_dump($_SESSION['order_array']);
 		        	$a=$_SESSION['order_array'];
 
-		        	echo "<ul>";
+		        	echo "<ol>";
 
-		        	foreach ($a as $key => $order_row) {
-		        		echo '<tr>'.var_dump($order_row).'</tr>';
+		        	foreach ($a as $key => $order_row)
+		        	{
+		        		echo "<tr class = 'grey'>".printDeleteButton().printOrderRow($order_row).'<br></tr>';
 		        	}
 
-		        	echo "</ul>";
+		        	echo "</ol>";
 		        ?>
 	        	<form name="clear_cart" action="process.php" method="post">		
 					<input type="hidden" name="action" value="clear_cart">
@@ -782,7 +802,9 @@
 		        <h4 class="modal-title" id="myModalLabel">Enter Payment</h4>
 		      </div>
 		      <div class="modal-body">
+					<button type="button" class="close" data-dismiss='modal' aria-hidden="true">&times;</button>
 				<div class='checkout'> 
+
 						<h1>Review My Order</h1>
 
 						<div id='enter_address'>
