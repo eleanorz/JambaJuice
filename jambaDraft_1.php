@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title>Order Jamba Online</title>
-	<link rel="icon" type="image/ico" href="http://jambajuice.com/images/www/tempIMGs/favicon.ico">
+	<link rel="icon" type="image/ico" href="pic/favicon.ico">
 	<link href="../../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
@@ -61,7 +61,6 @@
 
 			$('#drinkhold').click(function(){
 				$('#AllModals').show();
-;
 			});
 
 			// setting modal elements to hide by default so as to not interrupt hover functions
@@ -92,11 +91,9 @@
 				}
 			}
 
-			function printDeleteButton()
+			function printDeleteButton($drinkname)
 			{
-				echo "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-";
-				// echo "<button type='button' aria-hidden='true'>&times;</button>";
+				echo "<button name='deleteItem' value='".$drinkname."' action='process.php' method='post' type='button' class='btn btn-warning btn-xs'>&times;</button>      ";
 			}
 		 ?>
 	</script>
@@ -110,7 +107,7 @@
 		<div id='jamba_text'>
 			<img src="pic/jambajuice_text_wide.jpg" alt="jamba juice">
 		</div>
-
+<!-- 	Below: wrapped drinkholder in generic bootstrap button so that it can open up modals -->
 		<a data-toggle="modal" href="#myModal">
 			<div id='drinkhold'>
 			<img src="pic/
@@ -224,6 +221,7 @@
 
 					<div class='item_wrapper'>
 						<h3>Mango-A-Go-Go</h3>
+
 						<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
 					
 						<div class='popup'> 
@@ -241,6 +239,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Mango-A-Go-Go'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -269,6 +268,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Razzmatazz'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -282,6 +282,7 @@
 
 					<div class='item_wrapper'>
 						<h3>Strawberries Wild</h3>
+
 						<h4>strawberries, bananas, apple-strawberry juice, nonfat frozen yogurt
 						</h4>
 						<div class='popup'> 
@@ -298,7 +299,8 @@
 								  <option value="22oz">22 oz - $3.50</option>
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
-
+								
+								<input type="hidden" name='drinkname' value='Strawberries Wild'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -313,7 +315,7 @@
 				<div id='column2' class='column'>
 				
 						<div class='item_wrapper'>
-							<h3>Caribbean Passion</h3>
+							<h3>Caribbean Passion</h3>												
 							<h4> passionfruit-mango juice, strawberries, peaches, orange sherbet
 							</h4>
 							<div class='popup'> 
@@ -331,6 +333,7 @@
 									  <option value="30oz">30 oz - $3.99</option>
 									</select>
 
+									<input type="hidden" name='drinkname' value='Caribbean Passion'>
 									<input type="hidden" name="action" value="add_to_cart">
 									<input type="submit" value="Add to Order">
 								</form>
@@ -343,7 +346,7 @@
 						</div>
 				
 						<div class='item_wrapper'>
-							<h3>Banana Berry</h3>
+							<h3>Banana Berry</h3>							
 							<h4>bananas, blueberries, apple-strawberry juice, raspberry sherbet, nonfat frozen yogurt
 							</h4>
 							<div class='popup'> 
@@ -361,6 +364,7 @@
 									  <option value="30oz">30 oz - $3.99</option>
 									</select>
 
+									<input type="hidden" name='drinkname' value='Banana Berry'>
 									<input type="hidden" name="action" value="Add to Cart">
 									<input type="submit" value="Add to Order">
 								</form>
@@ -390,7 +394,8 @@
 									  <option value="22oz">22 oz - $3.50</option>
 									  <option value="30oz">30 oz - $3.99</option>
 									</select>
-
+							
+									<input type="hidden" name='drinkname' value='Orange-A-Peel'>
 									<input type="hidden" name="action" value="add_to_cart">
 									<input type="submit" value="Add to Order">
 								</form>
@@ -421,6 +426,7 @@
 									  <option value="30oz">30 oz - $3.99</option>
 									</select>
 
+									<input type="hidden" name='drinkname' value='Pomegranate Pick-Up'>
 									<input type="hidden" name="action" value="add_to_cart">
 									<input type="submit" value="Add to Order">
 								</form>
@@ -449,6 +455,7 @@
 									  <option value="30oz">30 oz - $3.99</option>
 									</select>
 
+									<input type="hidden" name='drinkname' value='Aloha Pineapple'>
 									<input type="hidden" name="action" value="add_to_cart">
 									<input type="submit" value="Add to Order">
 								</form>
@@ -488,6 +495,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Strawberry Whirl'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -515,6 +523,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Mega Mango'>								
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -542,7 +551,8 @@
 								  <option value="22oz">22 oz - $3.50</option>
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
-
+								
+								<input type="hidden" name='drinkname' value='Pomegranate Paradise'>								
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -571,7 +581,8 @@
 								  <option value="22oz">22 oz - $3.50</option>
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
-
+								
+								<input type="hidden" name='drinkname' value='Peach Perfection'>								
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -599,6 +610,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Five Fruit Frenzy'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -618,7 +630,7 @@
 				</div>
 				<div id='column1' class='column'>
 					<div class='item_wrapper'>
-						<h3>Peanut Butter Moo'd® Smoothie</h3>
+						<h3>Peanut Butter Moo'd Smoothie</h3>
 						<h4>Peanut butter, bananas, nonfat vanilla frozen yogurt and milk chocolate</h4>
 						<div class='popup'> 
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
@@ -635,6 +647,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Peanut Butter Mood Smoothie'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -644,7 +657,7 @@
 						</div>
 					</div>
 					<div class='item_wrapper'>
-						<h3> Chocolate Moo'd</h3>
+						<h3>Chocolate Moo'd</h3>
 						<h4>nonfat vanilla frozen yogurt and milk chocolate</h4>
 						<div class='popup'> 
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
@@ -661,6 +674,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Chocolate Mood'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -687,6 +701,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Orange Dream Machine'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -716,6 +731,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Pumpkin Smash'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -743,6 +759,7 @@
 								  <option value="30oz">30 oz - $3.99</option>
 								</select>
 
+								<input type="hidden" name='drinkname' value='Matcha Green Tea Blast'>
 								<input type="hidden" name="action" value="add_to_cart">
 								<input type="submit" value="Add to Order">
 							</form>
@@ -772,14 +789,14 @@
 		        	// var_dump($_SESSION['order_array']);
 		        	$a=$_SESSION['order_array'];
 
-		        	echo "<ol>";
+		        	echo "<table class='table table-hover'>";
 
 		        	foreach ($a as $key => $order_row)
 		        	{
-		        		echo "<tr class = 'grey'>".printDeleteButton().printOrderRow($order_row).'<br></tr>';
+		        		echo "<tr class = 'grey'>".printDeleteButton($order_row['drink_name']).printOrderRow($order_row).'</tr>';
 		        	}
 
-		        	echo "</ol>";
+		        	echo "</table>";
 		        ?>
 	        	<form name="clear_cart" action="process.php" method="post">		
 					<input type="hidden" name="action" value="clear_cart">

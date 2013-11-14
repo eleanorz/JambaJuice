@@ -291,11 +291,13 @@
 
 .modal-body
 {
-	height: 500px;
+	height: auto;
+	width: auto;
 }
 
 .modal{
 	height: auto;
+	width: auto;
 }
 
 .grey
