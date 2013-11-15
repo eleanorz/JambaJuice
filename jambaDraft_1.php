@@ -10,6 +10,7 @@
 	<link rel="icon" type="image/ico" href="pic/favicon.ico">
 	<link href="../../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Walter+Turncoat|Indie+Flower|Chango' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Cedarville+Cursive" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type='text/css' href="font\webfontkit-meta\stylesheet.css" charset="utf-8"> <!-- brings in webfonts -->
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.9.1.js'></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -68,7 +69,10 @@
 			//line below: sets popup descriptions to hide by default
 			$('.item_wrapper').children(".popup").hide();
 			//line below: handles toggling the pop-up, and changes background color to white during hover
-			$('.item_wrapper').hover(function(){$(this).children('.popup').slideToggle();$(this).css('background-color', 'white');$(this).css("color", "black"); isSpin=1;}, function(){$(this).children('.popup').hide();$(this).css("background-color", "transparent");$(this).css("color", "white");isSpin=0;});
+			$('.item_wrapper').hover(function(){$(this).children('.popup').slideToggle();}, function(){$(this).children('.popup').hide();});
+			
+			//below is duplicate, safety copy of the popup JS
+			// $('.item_wrapper').hover(function(){$(this).children('.popup').slideToggle();$(this).children('h3').css('background-color', 'white');$(this).children('h3').css('color', '#538C00');$(this).css("color", "black");}, function(){$(this).children('.popup').hide();$(this).css("background-color", "transparent");$(this).css("color", "white");$(this).children('h3').css('color', '#CCFF66');});
 								
 			// true/ if spin false
 			
@@ -78,7 +82,6 @@
 			// {
 			// 	setInterval(function(){carousel.spin()},10000);				
 			// }
-
 		});
 	</script>
 	<script>
@@ -107,7 +110,7 @@
 		<div id='jamba_text'>
 			<img src="pic/jambajuice_text_wide.jpg" alt="jamba juice">
 		</div>
-<!-- 	Below: wrapped drinkholder in generic bootstrap button so that it can open up modals -->
+<!-- Below: wrapped drinkholder in generic bootstrap button so that it can open up modals -->
 		<a data-toggle="modal" href="#myModal">
 			<div id='drinkhold'>
 			<img src="pic/
@@ -146,7 +149,7 @@
 			</div>
 			</div>
 		</a>
-		<h1> order for pick-up with three clicks</h1>
+		<h1> order pick-up in four clicks</h1>
 	</div>
 
 	<div class='clear'></div>
@@ -166,6 +169,7 @@
 						<h3>Peach Pleasure</h3>
 						<h4>peaches, bananas, peach juice, orange sherbet</h4>
 						<div class='popup'> 
+							<h3>Peach Pleasure</h3>
 							<form name="drink_form" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -182,7 +186,7 @@
 
 								<input type="hidden" name='drinkname' value='Peach Pleasure'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success"  value="Add to Order">
 							</form>
 
 							<img src="pic/PeachPleasure.jpg" alt="peachpls">
@@ -195,6 +199,7 @@
 						<h3>Strawberry Surf Rider</h3>
 						<h4>strawberries, peaches, lemonade, lime sherbet</h4>
 						<div class='popup'> 
+							<h3>Strawberry Surf Rider</h3>
 							<form name="drink_form" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -211,7 +216,7 @@
 
 								<input type="hidden" name='drinkname' value='Strawberry Surf Rider'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/StrawberrySurfrider.jpg" alt="strawsurf">
@@ -221,10 +226,10 @@
 
 					<div class='item_wrapper'>
 						<h3>Mango-A-Go-Go</h3>
-
 						<h4>mangos, passionfruit-mango juice, pineapple sherbet</h4>
 					
-						<div class='popup'> 
+						<div class='popup'>
+							<h3>Mango-A-Go-Go</h3>
 							<form name="drink_form" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -241,7 +246,7 @@
 
 								<input type="hidden" name='drinkname' value='Mango-A-Go-Go'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/MangoAgogo.jpg" alt="mango">
@@ -254,6 +259,7 @@
 						<h4>mixed berry juice, strawberries, bananas, orange sherbet
 						</h4>
 						<div class='popup'> 
+							<h3>Razzmatazz</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -270,7 +276,7 @@
 
 								<input type="hidden" name='drinkname' value='Razzmatazz'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/Razzamatazz.jpg" alt="">
@@ -282,10 +288,10 @@
 
 					<div class='item_wrapper'>
 						<h3>Strawberries Wild</h3>
-
 						<h4>strawberries, bananas, apple-strawberry juice, nonfat frozen yogurt
 						</h4>
-						<div class='popup'> 
+						<div class='popup'>
+							<h3>Strawberries Wild</h3>
 							<form name="drink_form" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -302,7 +308,7 @@
 								
 								<input type="hidden" name='drinkname' value='Strawberries Wild'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/StrawberryWild.jpg" alt="strawwild">
@@ -319,6 +325,7 @@
 							<h4> passionfruit-mango juice, strawberries, peaches, orange sherbet
 							</h4>
 							<div class='popup'> 
+								<h3>Caribbean Passion</h3>
 								<form name="drink_form" action="process.php" method="post">
 									<select name='number_drinks'>
 									  <option value="1">1</option>
@@ -335,7 +342,7 @@
 
 									<input type="hidden" name='drinkname' value='Caribbean Passion'>
 									<input type="hidden" name="action" value="add_to_cart">
-									<input type="submit" value="Add to Order">
+									<input type="submit" class="btn btn-success" value="Add to Order">
 								</form>
 
 								<img src="pic/CarribeanPassion.jpg" alt="carpas">
@@ -349,7 +356,8 @@
 							<h3>Banana Berry</h3>							
 							<h4>bananas, blueberries, apple-strawberry juice, raspberry sherbet, nonfat frozen yogurt
 							</h4>
-							<div class='popup'> 
+							<div class='popup'>
+								<h3>Banana Berry</h3>
 								<form name="drink_form" action="process.php" method="post">
 									<select name='number_drinks'>
 									  <option value="1">1</option>
@@ -366,7 +374,7 @@
 
 									<input type="hidden" name='drinkname' value='Banana Berry'>
 									<input type="hidden" name="action" value="Add to Cart">
-									<input type="submit" value="Add to Order">
+									<input type="submit" class="btn btn-success" value="Add to Order">
 								</form>
 
 								<img src="pic/BananaBerry.jpg" alt="banber">
@@ -380,7 +388,8 @@
 							<h3>Orange-A-Peel</h3>
 							<h4>orange juice, strawberries, bananas, frozen yogurt
 							</h4>
-							<div class='popup'> 
+							<div class='popup'>
+								<h3>Orange-A-Peel</h3>
 								<form name="drink_form" action="process.php" method="post">
 									<select name='number_drinks'>
 									  <option value="1">1</option>
@@ -397,7 +406,7 @@
 							
 									<input type="hidden" name='drinkname' value='Orange-A-Peel'>
 									<input type="hidden" name="action" value="add_to_cart">
-									<input type="submit" value="Add to Order">
+									<input type="submit" class="btn btn-success" value="Add to Order">
 								</form>
 
 								<img src="pic/Orangeapeel.jpg" alt="orgpl">
@@ -411,7 +420,8 @@
 							<h3>Pomegranate Pick-Up</h3>
 							<h4>pomegranate juice, strawberries, blueberries, raspberry sherbet
 							</h4>
-							<div class='popup'> 
+							<div class='popup'>
+								<h3>Pomegranate Pick-Up</h3>
 								<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 									<select name='number_drinks'>
 									  <option value="1">1</option>
@@ -428,7 +438,7 @@
 
 									<input type="hidden" name='drinkname' value='Pomegranate Pick-Up'>
 									<input type="hidden" name="action" value="add_to_cart">
-									<input type="submit" value="Add to Order">
+									<input type="submit" class="btn btn-success" value="Add to Order">
 								</form>
 
 								<img src="pic/PomegranatePickmeup.jpg" alt="">
@@ -440,7 +450,8 @@
 							<h3>Aloha Pineapple</h3>
 							<h4>pineapple juice, strawberries, bananas, pineapple sherbet, nonfat plain yogurt
 							</h4>
-							<div class='popup'> 
+							<div class='popup'>
+								<h3>Aloha Pineapple</h3>
 								<form name="drink_form" action="process.php" method="post">
 									<select name='number_drinks'>
 									  <option value="1">1</option>
@@ -457,7 +468,7 @@
 
 									<input type="hidden" name='drinkname' value='Aloha Pineapple'>
 									<input type="hidden" name="action" value="add_to_cart">
-									<input type="submit" value="Add to Order">
+									<input type="submit" class="btn btn-success" value="Add to Order">
 								</form>
 
 								<img src="pic/PineappleAloha.jpg" alt="pinealoha">
@@ -481,6 +492,7 @@
 						<h3>Strawberry Whirl</h3>
 						<h4>strawberries, bananas, apple-strawberry juice</h4>	
 						<div class='popup'> 
+							<h3>Strawberry Whirl</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -497,11 +509,11 @@
 
 								<input type="hidden" name='drinkname' value='Strawberry Whirl'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/StrawberryWhirl.jpg" alt="">
-							<p>desc</p>
+							<p>We hope you’re not afraid of heights because you’re about to be swept up and taken for a ride on the back of a strawberry soaring through apple-berry skies around banana clouds. Fly high, fruit angel.</p>
 						</div>						
 					</div>	
 				
@@ -509,6 +521,7 @@
 						<h3>Mega Mango</h3>
 						<h4>mangos, strawberries, orange juice, pineapple juice</h4>
 						<div class='popup'> 
+							<h3>Mega Mango</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -525,7 +538,7 @@
 
 								<input type="hidden" name='drinkname' value='Mega Mango'>								
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/MegaMango.jpg" alt="">
@@ -538,6 +551,7 @@
 						<h3>Pomegranate Paradise</h3>
 						<h4>pomegranate juice, strawberries, mangos, peaches</h4>
 						<div class='popup'> 
+							<h3>Pomegranate Paradise</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -554,11 +568,11 @@
 								
 								<input type="hidden" name='drinkname' value='Pomegranate Paradise'>								
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/PomegranateParadise.jpg" alt="">
-							<p>desc</p>
+							<p>Imagine a wondrous landscape where strawberries, mangos and peaches splash about, floating down a lazy river of pomegranate juice. Is that your cabin on the shore? It is. Welcome to paradise.</p>
 						</div>
 					</div>
 				</div>
@@ -568,6 +582,7 @@
 						<h3>Peach Perfection</h3>
 						<h4>peaches, mangos, strawberries, peach and apple-strawberry juice</h4>
 						<div class='popup'> 
+							<h3>Peach Perfection</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -584,7 +599,7 @@
 								
 								<input type="hidden" name='drinkname' value='Peach Perfection'>								
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/PeachPerfection.jpg" alt="">
@@ -596,6 +611,7 @@
 						<h3>Five Fruit Frenzy</h3>
 						<h4>strawberries, bananas, peaches, mango, blueberries, peach juice, berry juice</h4>
 						<div class='popup'> 
+							<h3>Five Fruit Frenzy</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -612,11 +628,11 @@
 
 								<input type="hidden" name='drinkname' value='Five Fruit Frenzy'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/FiveFruitFrenzy.jpg" alt="">
-							<p>desc</p>
+							<p>Get ready to be engulfed in a whirlwind of fruit flavor. Strawberry, banana, blueberry, mango and peach all vie for supremacy in a flavor tornado the likes of which your taste buds have never experienced.</p>
 						</div>
 					</div>	
 				</div>
@@ -633,6 +649,7 @@
 						<h3>Peanut Butter Moo'd Smoothie</h3>
 						<h4>Peanut butter, bananas, nonfat vanilla frozen yogurt and milk chocolate</h4>
 						<div class='popup'> 
+							<h3>Peanut Butter Moo'd Smoothie</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -649,7 +666,7 @@
 
 								<input type="hidden" name='drinkname' value='Peanut Butter Mood Smoothie'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/PeanutbutterMood.jpg" alt="">
@@ -660,6 +677,7 @@
 						<h3>Chocolate Moo'd</h3>
 						<h4>nonfat vanilla frozen yogurt and milk chocolate</h4>
 						<div class='popup'> 
+							<h3>Chocolate Moo'd</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -676,7 +694,7 @@
 
 								<input type="hidden" name='drinkname' value='Chocolate Mood'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/ChocolateMood.jpg" alt="">
@@ -687,6 +705,7 @@
 						<h3>Orange Dream Machine</h3>
 						<h4>orange juice, orange sherbet, soymilk, nonfat frozen yogurt</h4>
 						<div class='popup'> 
+							<h3>Orange Dream Machine</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -703,7 +722,7 @@
 
 								<input type="hidden" name='drinkname' value='Orange Dream Machine'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/OrangeDream.jpg" alt="">
@@ -714,9 +733,39 @@
 				<div id='column2' class='column'>
 
 					<div class='item_wrapper'>
+						<h3>White Gummi Bear</h3>
+						<h4>Peach juice, mangoes, pineapple, raspberry and orange sherbet</h4>
+						<div class='popup'> 
+							<h3>White Gummi Bear</h3>
+							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
+								<select name='number_drinks'>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								</select>
+
+								<select name="size">
+								  <option value="16oz">16 oz - $2.50</option>
+								  <option value="22oz">22 oz - $3.50</option>
+								  <option value="30oz">30 oz - $3.99</option>
+								</select>
+
+								<input type="hidden" name='drinkname' value='White Gummi Bear'>
+								<input type="hidden" name="action" value="add_to_cart">
+								<input type="submit" class="btn btn-success" value="Add to Order">
+							</form>
+
+							<img src="pic/whitegummi.jpg" alt="">
+							<p>Who wouldn’t love to drink their Gummy Bears?  The perfect blend of sherbet can taste exactly like your favorite candy.  Called White Gummy Bear, this secret menu item is a combination of peach juice, soymilk, a scoop of lime, raspberry, orange and pineapple sherbets --and mangos.</p>
+						</div>
+					</div>	
+
+					<div class='item_wrapper'>
 						<h3>Pumpkin Smash</h3>
 						<h4>real pumpkin blended with frozen yogurt and a hint of cinnamon and nutmeg</h4>
 						<div class='popup'> 
+							<h3>Pumpkin Smash</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -733,18 +782,19 @@
 
 								<input type="hidden" name='drinkname' value='Pumpkin Smash'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/pumpkinsmash.jpg" alt="">
 							<p>Pumpkin Pie’s Fitter, Cooler Cousin. This deliciously creamy treat celebrates autumn’s most iconic fruit! This Fall classic of real pumpkin blended with frozen yogurt and a hint of cinnamon and nutmeg will have you dreaming of Grammy’s homemade pumpkin pie.</p>
 						</div>
-					</div>						
-		
+					</div>
+
 					<div class='item_wrapper'>
 						<h3>Matcha Green Tea Blast</h3>
 						<h4>nonfat vanilla frozen yogurt, sorbet and Matcha Green Tea</h4>
 						<div class='popup'> 
+							<h3>Matcha Green Tea Blast</h3>
 							<form value="add_to_cart" name="add_to_cart" action="process.php" method="post">
 								<select name='number_drinks'>
 								  <option value="1">1</option>
@@ -761,7 +811,7 @@
 
 								<input type="hidden" name='drinkname' value='Matcha Green Tea Blast'>
 								<input type="hidden" name="action" value="add_to_cart">
-								<input type="submit" value="Add to Order">
+								<input type="submit" class="btn btn-success" value="Add to Order">
 							</form>
 
 							<img src="pic/Greenteamatcha.jpg" alt="">
@@ -800,7 +850,7 @@
 		        ?>
 	        	<form name="clear_cart" action="process.php" method="post">		
 					<input type="hidden" name="action" value="clear_cart">
-					<input type="submit" value="clear cart">
+					<input type="submit"  class="btn btn-warning" value="clear cart">
 				</form>
 		      </div>
 		      <div class="modal-footer">
@@ -837,7 +887,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#myModal">Back</button>
-		        <button type="button" class="btn btn-primary" data-dismiss='modal' data-toggle="modal" href="#myModal3"> Order</button>
+		        <button type="button" class="btn btn-warning" data-dismiss='modal' data-toggle="modal" href="#myModal3"> Order</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->

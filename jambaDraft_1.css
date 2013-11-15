@@ -32,7 +32,8 @@
 {
 	color: #2C2C3D;
 	float: right;
-	font-family: 'Lily Script One', cursive;
+	font-family:'Cedarville Cursive',cursive;
+	/*'Lily Script One', cursive;*/
 	font-size:200%;
 	font-size:35px;
 	margin-top: -14px;
@@ -122,13 +123,15 @@
 {
 /*	font-family: 'Chango', cursive;
 	color: #C3087E;*/
-	font-family: 'chalkboard_by_marta_van_eckRg', Arial, sans-serif;
-	opacity: .90;
+	/*font-family: 'chalkboard_by_marta_van_eckRg', Arial, sans-serif;
+	font-family: 'Lily Script One', cursive;
+	*/font-family: 'Cabin Sketch',Arial,Sans-Serif;
+	opacity: .80;
 	color: #FFB8FF;
-	margin-left: 255px;
+	margin-left: 170px;
 	margin-top: 18px;
-	margin-bottom: 7px;
-	font-size: 53px;
+	margin-bottom: 15px;
+	font-size: 65px;
 }
 
 .column
@@ -144,12 +147,9 @@
 	padding-right: 3px;
 /*	width: 447px;
 */	height: auto;
-/*	float: left;
-*/	position:relative;
+	position:relative;
 	display: inline-block;
 	color: black;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
 }
 
 .item_wrapper h3{
@@ -162,46 +162,61 @@
 	margin-left: 10px;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	margin-right: 5px;
 }
 
 .item_wrapper h4{
+	color: white;
 	position:relative;
 	margin-top: 0px;
 	z-index: 10;
-	font-size: 11px;
+	font-size: 13px;
 	width: 375
 }
+
+select{
+	margin-top: 10px;
+	width: 80px;
+}
+
+form{
+	margin-bottom: 3px;
+}
+
 
 .popup{
 	position: absolute;
 	left: 0px;
-	top: 67px;
-/*
-	ideally, should grab the height of parent wrapper?*/
+	top: 0px;
 	clear: both;
 	z-index: 100;
 	width: 400px;
 	border-radius: 20px;
-	border-top-left-radius: 0;
 	font-size: 10px;     
 	padding:8px;
 	background-color: white;
 }
 
 .popup img{
-	width: 130px;
+	width: 170px;
 	max-height: 100%;
 	float: left;
 	display: block;
-	border-radius: 50px;
+	border-bottom-left-radius: 20px;
+
+}
+
+.popup h3{
+	color: #538C00;
 }
 
 .popup p{
-	float: left;/*
-	width: 130px;
-	height: auto;*/
+	float: left;
+	width: 210px;
+	height: auto;
 	margin-left: 10px;
 	margin-top:0px;
+	font-size: 13px; 
 }
 
 .checkout{
@@ -292,7 +307,7 @@
 .modal-body
 {
 	height: auto;
-	width: auto;
+	width: 350px;
 }
 
 .modal{
