@@ -29,7 +29,6 @@ if(isset($_POST['action']) AND $_POST['action'] == 'add_to_cart')
 			echo $drink['num_of_drinks'];
 			echo $drink['drink_name'];
 
-
 			if ($drink['drink_name']==$newDrinkName) //this means we are adding on additional drinks 
 			{
 				echo "<br> we have another of the {$newDrinkName}!!";

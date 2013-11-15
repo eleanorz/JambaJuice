@@ -88,6 +88,7 @@
 		<?php 
 			function printOrderRow($lineArray)
 			{
+
 				foreach ($lineArray as $key => $l)
 				{
 					echo "<td>   ".$l."... </td>";
@@ -96,7 +97,8 @@
 
 			function printDeleteButton($drinkname)
 			{
-				echo "<button name='deleteItem' value='".$drinkname."' action='process.php' method='post' type='button' class='btn btn-warning btn-xs'>&times;</button>      ";
+				echo "<td>button</td>";
+				// echo "<button name='deleteItem' value='".$drinkname."' action='process.php' method='post' type='button' class='btn btn-warning btn-xs'>&times;</button>      ";
 			}
 		 ?>
 	</script>
@@ -850,8 +852,12 @@
 		        ?>
 	        	<form name="clear_cart" action="process.php" method="post">		
 					<input type="hidden" name="action" value="clear_cart">
-					<input type="submit"  class="btn btn-warning" value="clear cart">
+					<input type="submit"  class="btn btn-warning btn-xs" value="clear cart">
 				</form>
+
+		        We detected that your closest store is: <br> 10503 NE 4th St, Bellevue 
+		        <a href="http://goo.gl/drhTzg" target="_blank">(Change)</a>
+		        <img src="pic/fakemap.jpg" alt="http://goo.gl/drhTzg" target="_blank">
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss='modal'>Back</button>

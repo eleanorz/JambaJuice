@@ -102,30 +102,9 @@
 	margin-right: 50px;
 }
 
-
-/*#main_menu{
-	padding-left: 13px;
-	left margin: -100px;
-	height: auto;
-	width: 1050px;
-	border: 1px solid yellow;
-}*/
-
-.smoothie_type
-{
-/*	width: 940px;
-	border-top: 3px solid #663300;
-	border-bottom: 6px solid #663300;*/
-}
-
-
 .smoothie_type h2
 {
-/*	font-family: 'Chango', cursive;
-	color: #C3087E;*/
-	/*font-family: 'chalkboard_by_marta_van_eckRg', Arial, sans-serif;
-	font-family: 'Lily Script One', cursive;
-	*/font-family: 'Cabin Sketch',Arial,Sans-Serif;
+	font-family: 'Cabin Sketch',Arial,Sans-Serif;
 	opacity: .80;
 	color: #FFB8FF;
 	margin-left: 170px;
@@ -308,6 +287,14 @@ form{
 {
 	height: auto;
 	width: 350px;
+}
+
+.modal-body img
+{
+	width: 200px;
+	max-height: 100%;
+	float: left;
+	display: block;
 }
 
 .modal{
